@@ -1,0 +1,78 @@
+body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	background: black;
+	font-weight: 600;
+	padding: 16px;
+}
+
+p {
+	/* tweak text centering */
+	padding-right: 3px;
+}
+
+.hanko-container {
+	display: flex;
+	border-radius: 25px;
+	justify-content: center;
+	align-items: center;
+	background: radial-gradient(#fff 60%, #aaa);
+	width: 240px;
+	height: 240px;
+	margin: 16px;
+	transform: rotate(-10deg);
+}
+
+.hanko-circle {
+	border: 7px solid #DD4827;
+	border-radius: 50%;
+	height: 80%;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+}
+
+.hanko-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #DD4827;
+}
+
+.hanko-text-one {
+	font-size: 780%;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+
+.hanko-text-two {
+	font-size: 520%;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+
+.hanko-text-three {
+	font-size: 350%;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+
+.hanko-text-four {
+	font-size: 260%;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+
+.hanko-text-five {
+	font-size: 200%;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}
+
+.hanko-text-long {
+	font-size: 170%;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}

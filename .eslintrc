@@ -1,0 +1,41 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["jest"],
+  "extends": ["airbnb", "plugin:jest/recommended"],
+  "rules": {
+    "strict": 0,
+    "no-multi-spaces": 0,
+    "padded-blocks": 0,
+    "no-mixed-spaces-and-tabs": 0,
+    "arrow-body-style": 0,
+    "one-var": 0,
+    "key-spacing": 0,
+    "no-underscore-dangle": 0,
+    "no-tabs": 0,
+    "class-methods-use-this": 0,
+    "comma-dangle": 0,
+    "indent": 0,
+    "consistent-return": 0,
+    "arrow-parens": 0,
+    "prefer-default-export": 0,
+    "no-use-before-define": 0,
+    "spaced-comment": 0,
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "react/prefer-stateless-function": 0,
+    "react/sort-comp": 1,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
+  "env": {
+    "browser": 1,
+    "node": 1,
+    "jest/globals": 1
+  }
+}

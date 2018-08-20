@@ -1,0 +1,23 @@
+.hanko-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: radial-gradient(#fff 60%, #aaa);
+	transform: rotate(0deg);
+}
+
+.hanko-circle {
+	border: 7px solid #DD4827;
+	border-radius: 50%;
+	height: 80%;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+}
+
+.hanko-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #DD4827;
+}
