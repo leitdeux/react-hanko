@@ -8,15 +8,10 @@ class Docs extends Component {
 		return (
 			<div>
 				<Hanko
+					familyName="鈴木"
 					rotation={0}
-					color="hotpink"
-					size={{
-						height: 500,
-						width: 500
-					}}
-				>
-					鈴木
-				</Hanko>
+					size={120}
+				/>
 			</div>
 		);
 	}
