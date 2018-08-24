@@ -9,8 +9,7 @@ class Docs extends Component {
 			<div>
 				<Hanko
 					familyName="鈴木"
-					rotation={0}
-					size={120}
+					size={500}
 				/>
 			</div>
 		);
