@@ -9,7 +9,7 @@ class Docs extends Component {
 			<div>
 				<Hanko
 					familyName="鈴木"
-					size={500}
+					size={400}
 				/>
 			</div>
 		);

@@ -39,8 +39,30 @@ describe('Hanko', () => {
 	it('should throw an error if neither familyName nor children props provided', () => {
 		let error;
 
+		// override console.error so jest can recognize the failed prop types error.
+		console.error = message => {
+			throw new Error(message);
+		};
+
 		try {
 			wrapper.setProps({ children: '' });
+		}	catch (err) {
+			error = err;
+		}
+
+		expect(error).toBeInstanceOf(Error);
+	});
+
+	it('should throw an error if size prop is not provided', () => {
+		let error;
+
+		// override console.error so jest can recognize the failed prop types error.
+		console.error = message => {
+			throw new Error(message);
+		};
+
+		try {
+			wrapper.setProps({ size: null });
 		}	catch (err) {
 			error = err;
 		}

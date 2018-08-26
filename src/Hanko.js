@@ -8,21 +8,74 @@ import {
 } from './utils';
 
 
+/**
+ * React class component visually representing a "hanko" (name stamp).
+ * @extends {Component}
+ */
 class Hanko extends Component {
 
 	state = { detectedLanguage: '' };
 
 	static propTypes = {
+		/**
+		 * Hanko label text.
+		 */
 		children: PropTypes.string,
+
+		/**
+		 * CSS class used for custom styling of the hanko ring and text.
+		 */
 		className: PropTypes.string,
+
+		/**
+		 * Hanko ring and text color.
+		 */
 		color: PropTypes.string,
+
+		/**
+		 * Inline style object used for overriding styles of the parent container div.
+		 */
 		containerStyle: PropTypes.objectOf(PropTypes.string),
-		familyName: PropTypes.string,
+
+		/**
+		 * Hanko label text (can be used instead of `children`).
+		 */
+		familyName(props, propName) {
+			if ((props.children === '') && (props[propName] === '')) {
+				return new Error(
+					'Please provide either a familyName or children prop to render <Hanko />.'
+				);
+			}
+		},
+
+		/**
+		 * Hanko label's text orientation.
+		 */
 		orientation: PropTypes.string,
+
+		/**
+		 * Hanko ring color.
+		 */
 		ringColor: PropTypes.string,
+
+		/**
+		 * Size of the hanko ring.
+		 */
 		ringSize: PropTypes.number,
+
+		/**
+		 * Rotation (transform) of the hanko stamp.
+		 */
 		rotation: PropTypes.number,
-		size: PropTypes.number,
+
+		/**
+		 * Size of the hanko itself.
+		 */
+		size: PropTypes.number.isRequired,
+
+		/**
+		 * Custom style object used to override the default styling of the hanko text.
+		 */
 		textStyle: PropTypes.objectOf(PropTypes.string)
 	};
 
@@ -36,7 +89,6 @@ class Hanko extends Component {
 		ringColor: '',
 		ringSize: 0,
 		rotation: 0,
-		size: 100,
 		textStyle: {}
 	};
 
@@ -56,10 +108,10 @@ class Hanko extends Component {
 		}
 	}
 
-	// dynamically set familyName according to:
-	// 1. size of the hanko container
-	// 2. length of familyName
-	// 3. detected language
+	/**
+	 * Returns the font size (in pixels) of the hanko text label.
+	 * @return {string}
+	 */
 	getFontSize() {
 		const { detectedLanguage } = this.state;
 		const {
@@ -68,41 +120,42 @@ class Hanko extends Component {
 			familyName
 		} = this.props;
 
-		let fontSize;
+		const nameText = children || familyName;
 
-		if (size) {
-			const nameText = familyName || children;
-
-			fontSize = calculateFontSize({
-				nameText,
-				detectedLanguage,
-				size
-			});
-		}
+		const fontSize = calculateFontSize({
+			nameText,
+			detectedLanguage,
+			size
+		});
 
 		return `${fontSize}px`;
 	}
 
 	// dynamically set the size of the hanko ring
+	/**
+	 * Returns the size (in pixels) of the hanko ring.
+	 * This value is used for both height and width of the ring.
+	 * @return {string}
+	 */
 	getRingSize() {
 		const {
 			ringSize,
 			size
 		} = this.props;
 
-		let updatedRingSize;
-
 		if (ringSize) {
 			return `${ringSize}px`;
 		}
 
-		if (size) {
-			updatedRingSize = calculateRingSize(size);
-		}
+		const updatedRingSize = calculateRingSize(size);
 
 		return `${updatedRingSize}px`;
 	}
 
+	/**
+	 * Returns the letter spacing (in em) to be used to style the hanko text label.
+	 * @return {string}
+	 */
 	getLetterSpacing() {
 		const { detectedLanguage } = this.state;
 		const {
@@ -115,6 +168,11 @@ class Hanko extends Component {
 		return calculateKerning(nameText, detectedLanguage);
 	}
 
+	/**
+	 * Returns the orientation of the hanko label text.
+	 * Orientations may be horizontal or vertical.
+	 * @return {string}
+	 */
 	getTextOrientation() {
 		const { detectedLanguage } = this.state;
 		const { orientation } = this.props;
@@ -134,14 +192,14 @@ class Hanko extends Component {
 		return textOrientation;
 	}
 
+	/**
+	 * Identifies the language used in the hanko label text,
+	 * recognizing it as either English or Japanese.
+	 */
 	detectLanguage() {
 		const { children, familyName } = this.props;
 
 		const nameText = children || familyName;
-
-		if (!nameText) {
-			throw new Error('<Hanko /> requires either a familyName or children prop to render.');
-		}
 
 		if (nameText && isEnglish(nameText)) {
 			this.setState({ detectedLanguage: 'English' });
@@ -162,6 +220,10 @@ class Hanko extends Component {
 			size,
 			textStyle
 		} = this.props;
+
+		if (!size || (!children && !familyName)) {
+			return null;
+		}
 
 		const textOrientation = this.getTextOrientation();
 

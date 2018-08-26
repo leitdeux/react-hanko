@@ -1,4 +1,8 @@
-// Percentages used to dynamically set the text size
+/**
+ * Percentages used when calculating the font size of the label text.
+ * @constant
+ * @type {number}
+ */
 export const JAPANESE_CHAR_RATIO = 0.3;
 export const ENGLISH_CHAR_RATIO = 0.2;
 export const ONE_CHAR_RATIO = 0.5;
@@ -6,21 +10,45 @@ export const TWO_CHAR_RATIO = 0.47;
 export const THREE_FOUR_CHAR_RATIO = 0.45;
 export const DEFAULT_CHAR_RATIO = 0.4;
 
-// letter spacing
+/**
+ * Letter spacing values used when setting the kerning of the hanko text.
+ * @constant
+ * @type {string}
+ */
 export const JAPANESE_DEFAULT_KERNING = '0.05em';
 export const JAPANESE_SINGLE_CHAR_KERNING = '-0.02em';
 
+/**
+ * Percentage used when calculating the size of the hanko ring.
+ * @type {number}
+ */
 export const RING_SIZE_RATIO = 0.03;
 
-
+/**
+ * Detect whether the provided text is English or not.
+ * @param  {string} text - The hanko label text's value.
+ * @return {boolean}
+ */
 export function isEnglish(text) {
 	return /^[0-9a-zA-Z]+$/.test(text);
 }
 
+/**
+ * Get the hanko ring's thickness.
+ * @param  {number} hankoSize - The hanko's height or width, in pixels.
+ * @return {number}
+ */
 export function calculateRingSize(hankoSize) {
 	return hankoSize * RING_SIZE_RATIO;
 }
 
+/**
+ * Get the letter spacing for the hanko text label,
+ * according to the language and length of the string.
+ * @param  {string} text - The hanko's text value.
+ * @param  {string} language - The
+ * @return {string}
+ */
 export function calculateKerning(text, language) {
 	let letterSpacing = language === 'Japanese'
 		? JAPANESE_DEFAULT_KERNING
@@ -37,16 +65,21 @@ export function calculateKerning(text, language) {
 	return letterSpacing;
 }
 
-// dynamically set font size according to:
-// 1. size of the hanko
-// 2. length of nameText
-// 3. detected language
-export function calculateFontSize(props) {
+/**
+ * Returns the font size of the hanko label text, according to the size of
+ * the hanko, the length of the label text, and the detected language of the label text.
+ * @param {Object} hankoProps - The properties of the hanko.
+ * @param {number} hankoProps.size - The hanko's width or height value.
+ * @param {string} hankoProps.detectedLanguage - The language used in the hanko label text.
+ * @param {string} hankoProps.nameText - The hanko label text value.
+ * @return {number}
+ */
+export function calculateFontSize(hankoProps) {
 	const {
 		size,
 		detectedLanguage,
 		nameText
-	} = props;
+	} = hankoProps;
 
 	let ratio;
 
