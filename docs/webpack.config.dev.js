@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-  template: path.resolve(__dirname, './docs/index.html'),
+  template: path.resolve(__dirname, './index.html'),
   filename: 'index.html',
   inject: 'body',
 });
@@ -12,7 +12,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:4000',
     'webpack/hot/only-dev-server',
-    path.resolve(__dirname, './docs/index.js'),
+    path.resolve(__dirname, './index.js'),
   ],
   mode: 'development',
   output: {
@@ -47,10 +47,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: [{
-          loader: 'babel-loader',
-          options: {
-            extends: path.join(__dirname, '.babelrc')
-          }
+          loader: 'babel-loader'
         }],
         exclude: /node_modules/,
       },

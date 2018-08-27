@@ -1,15 +1,14 @@
 .hanko-circle {
+	display: flex;
+	justify-content: center;
 	border-style: solid;
 	border-radius: 50%;
 	height: 80%;
 	width: 80%;
-	display: flex;
-	justify-content: center;
 }
 
 .hanko-content {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #DD4827;
 }

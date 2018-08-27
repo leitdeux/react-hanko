@@ -1,9 +1,25 @@
 {
-	"presets": ["env", "react"],
+	"presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "react"
+  ],
+	"comments": false,
+	"env": {
+  	"production": {
+  		"presets": ["minify"]
+  	}
+  },
   "plugins": [
   	["transform-class-properties"],
   	["transform-object-rest-spread", {
   		"useBuiltIns": true
   	}],
-  ],
+  ]
 }

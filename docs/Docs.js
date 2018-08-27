@@ -8,7 +8,7 @@ class Docs extends Component {
 		return (
 			<div>
 				<Hanko
-					familyName="鈴木"
+					familyName="山本"
 					size={400}
 				/>
 			</div>

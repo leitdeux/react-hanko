@@ -39,7 +39,7 @@ describe('Hanko', () => {
 	it('should throw an error if neither familyName nor children props provided', () => {
 		let error;
 
-		// override console.error so jest can recognize the failed prop types error.
+		/* eslint-disable no-console */
 		console.error = message => {
 			throw new Error(message);
 		};
@@ -56,7 +56,7 @@ describe('Hanko', () => {
 	it('should throw an error if size prop is not provided', () => {
 		let error;
 
-		// override console.error so jest can recognize the failed prop types error.
+		/* eslint-disable no-console */
 		console.error = message => {
 			throw new Error(message);
 		};

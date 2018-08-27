@@ -28,7 +28,7 @@ class Hanko extends Component {
 		className: PropTypes.string,
 
 		/**
-		 * Hanko ring and text color.
+		 * Color of the hanko "ring" and text label
 		 */
 		color: PropTypes.string,
 
@@ -54,7 +54,7 @@ class Hanko extends Component {
 		orientation: PropTypes.string,
 
 		/**
-		 * Hanko ring color.
+		 * Color of the hanko 'ring'
 		 */
 		ringColor: PropTypes.string,
 
@@ -64,12 +64,12 @@ class Hanko extends Component {
 		ringSize: PropTypes.number,
 
 		/**
-		 * Rotation (transform) of the hanko stamp.
+		 * Rotation (transform) of the hanko text.
 		 */
 		rotation: PropTypes.number,
 
 		/**
-		 * Size of the hanko itself.
+		 * Size (height and width are equal) of the hanko itself.
 		 */
 		size: PropTypes.number.isRequired,
 

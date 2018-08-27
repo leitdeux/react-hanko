@@ -1,0 +1,16 @@
+branches:
+  only:
+    - master
+notifications:
+  email: false
+language: node_js
+node_js:
+  - "8"
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+  - npm run build
+script:
+  - npm run test
