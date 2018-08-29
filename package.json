@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "BABEL_ENV=production babel src/ --out-dir lib --copy-files --ignore \"**/__tests__/*\"",
+    "build": "npm run prebuild && BABEL_ENV=production babel src/ --out-dir lib --copy-files --ignore \"**/__tests__/*\"",
     "clean": "rimraf lib",
     "prebuild": "npm run clean",
     "test": "npm run test:lint && npm run test:unit",
