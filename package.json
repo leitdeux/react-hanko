@@ -1,6 +1,6 @@
 {
   "name": "react-hanko",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React component for rendering hanko (Japanese name seals)",
   "author": "Elliott Fiedler <elliott.fiedler@icloud.com> (https://github.com/leitdeux)",
   "main": "./lib/Hanko.js",
@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "BABEL_ENV=production babel src/ --out-dir lib --copy-files --ignore \"**/__tests__/*\"",
+    "build": "npm run prebuild && BABEL_ENV=production babel src/ --out-dir lib --copy-files --ignore \"**/__tests__/*\"",
     "clean": "rimraf lib",
     "prebuild": "npm run clean",
     "test": "npm run test:lint && npm run test:unit",
