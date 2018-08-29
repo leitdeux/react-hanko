@@ -1,9 +1,6 @@
-// TODO -- add travis badge
-// TODO -- add npm badge
-
 # react-hanko
 
-A cute, novel reusable React component to render Japanese *hanko*. Spice up your sign-up forms and digital contracts with **react-hanko**! 💮
+A React component to render Japanese *hanko*. Use it to add UX flair and realism to forms, digital contracts and signatures. 💮
 
 > ##### han·ko
 > *A Japanese stamp made of wood, stone, or horn, engraved with the name of an individual, office, or institution and used instead of a signature in official transactions.*
@@ -22,12 +19,6 @@ A cute, novel reusable React component to render Japanese *hanko*. Spice up your
   - Use your own custom inline styles to override the default CSS styling
 
 ## Getting Started
-
-### Demo
-
-![Screenshot](https://raw.githubusercontent.com/leitdeux/react-hanko/images/screenshot.png)
-
-[https://leitdeux.github.io/react-hanko/](https://leitdeux.github.io/react-hanko/)
 
 ### Installation
 
@@ -48,11 +39,11 @@ import { Hanko } from 'react-hanko';
 class MyComponent extends Component {
   render() {
     return (
-	  <Hanko
-	    familyName="鈴木"
-		size={100}
-	  />
-	);
+	    <Hanko
+	      familyName="鈴木"
+		    size={100}
+	    />
+	  );
   }
 }
 ```
@@ -76,6 +67,10 @@ These are the available properties to customize `react-hanko`.
 | `rotation`            | `PropTypes.number`                                          | `0`                              | Rotation (transform) of the hanko text.                                                                                                 |
 | `size`                | `PropTypes.number.isRequired`                               | `undefined`                      | Size (height and width are equal) of the hanko itself.                                                                                  |
 | `textStyle`           | `PropTypes.objectOf(PropTypes.string)`                      | `{}`                             | Custom style object used to override the default styling of the hanko text.                                                             |
+
+## ChangeLog
+
+See [CHANGELOG.md](https://github.com/leitdeux/react-hanko/blob/master/CHANGELOG.md)
 
 ## Contribution
 Thanks for checking out **react-hanko**.
