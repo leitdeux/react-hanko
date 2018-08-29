@@ -233,10 +233,26 @@ class Hanko extends Component {
 			...containerStyle
 		};
 
-		const hankoRingStyle = {
+		const hankoCustomRingStyle = {
 			borderColor: ringColor || color,
 			borderWidth: this.getRingSize(),
 			transform: `rotate(${rotation}deg)`
+		};
+
+		const hankoRingStyle = {
+			display: 'flex',
+			justifyContent: 'center',
+			borderStyle: 'solid',
+			borderRadius: '50%',
+			height:'80%',
+			width: '80%',
+			...hankoCustomRingStyle
+		};
+
+		const hankoContentStyle = {
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center'
 		};
 
 		const hankoTextStyle = {
@@ -254,10 +270,9 @@ class Hanko extends Component {
 		return (
 			<div style={hankoContainerStyle}>
 				<div
-					className="hanko-circle"
 					style={hankoRingStyle}
 				>
-					<div className="hanko-content">
+					<div style={hankoContentStyle}>
 						<p
 							className={className}
 							style={hankoTextStyle}

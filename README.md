@@ -1,6 +1,6 @@
 # react-hanko
 
-A React component to render Japanese *hanko*. Use it to add UX flair and realism to forms, digital contracts and signatures. 💮
+A UI component to render Japanese *hanko*. Use it to add flair and realism to forms, digital contracts and signatures. 💮
 
 > ##### han·ko
 > *A Japanese stamp made of wood, stone, or horn, engraved with the name of an individual, office, or institution and used instead of a signature in official transactions.*
@@ -39,11 +39,11 @@ import { Hanko } from 'react-hanko';
 class MyComponent extends Component {
   render() {
     return (
-	    <Hanko
-	      familyName="鈴木"
-		    size={100}
-	    />
-	  );
+      <Hanko
+        familyName="鈴木"
+        size={100}
+      />
+    );
   }
 }
 ```
