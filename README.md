@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/leitdeux/react-hanko.svg?branch=master)](https://travis-ci.org/leitdeux/react-hanko)
+[![npm version](http://img.shields.io/npm/v/react-hanko.svg)](https://npmjs.org/package/react-hanko)
+
 # react-hanko
 
 A UI component to render Japanese *hanko*. Use it to add flair and realism to forms, digital contracts and signatures. 💮
