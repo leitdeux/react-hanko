@@ -1,5 +1,6 @@
 .babelrc
 .eslintrc
+.editorconfig
 .travis.yml
 *.sublime-project
 *.sublime-workspace

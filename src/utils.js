@@ -20,6 +20,7 @@ export const JAPANESE_SINGLE_CHAR_KERNING = '-0.02em';
 
 /**
  * Percentage used when calculating the size of the hanko ring.
+ * @constant
  * @type {number}
  */
 export const RING_SIZE_RATIO = 0.03;
