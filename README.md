@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="react-hanko logo" src="logo.png" width="75%" />
+  <img alt="react-hanko logo" src="logo.png" width="50%" />
 </p>
 
 <p align="center">
