@@ -50,7 +50,7 @@ You can install [react-hanko](https://www.npmjs.com/package/react-hanko) from [n
 $ npm install react-hanko
 ```
 
-### Example
+### Quick Example
 
 Here is a quick example to get you started.
 
@@ -69,6 +69,10 @@ class MyComponent extends Component {
   }
 }
 ```
+
+### Running the Example Project
+
+Run `npm start` in the terminal, and access the page at `http://localhost:3000` in your browser of choice.
 
 ## Props
 
