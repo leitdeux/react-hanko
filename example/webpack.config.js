@@ -23,7 +23,7 @@ module.exports = {
     historyApiFallback: true,
     compress: true,
     contentBase: path.resolve(__dirname, './'),
-    port: 4000,
+    port: 3000,
     stats: {
       colors: true,
       hash: false,

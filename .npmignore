@@ -6,5 +6,5 @@
 *.sublime-workspace
 setupTests.js
 src
-docs
+example
 CODE_OF_CONDUCT.md

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Docs from './Docs';
+import App from './App';
 
-import './docs.scss';
+import './styles/app.scss';
 
 ReactDOM.render(
-	<Docs />,
+	<App />,
 	document.getElementById('app')
 );
