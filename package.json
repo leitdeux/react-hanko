@@ -15,7 +15,7 @@
     "hanko",
     "inkan",
     "names",
-    "ui"
+    "signature"
   ],
   "license": "MIT",
   "scripts": {

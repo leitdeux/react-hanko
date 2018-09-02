@@ -1,3 +1,6 @@
+# 0.1.0
+*  fbd6ae4 Add example project and logo
+
 # 0.0.3
 *  148420d Add babel-cli to install scheme for Travis CI
 
