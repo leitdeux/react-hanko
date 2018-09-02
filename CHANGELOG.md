@@ -1,3 +1,7 @@
+# 0.1.1
+*  adff9f1 Update .npmignore
+*  398d304 Update README.md
+
 # 0.1.0
 *  fbd6ae4 Add example project and logo
 
