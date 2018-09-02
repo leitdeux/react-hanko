@@ -1,6 +1,6 @@
 {
   "name": "react-hanko",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A React component for rendering hanko (Japanese name seals)",
   "author": "Elliott Fiedler <elliott.fiedler@icloud.com> (https://github.com/leitdeux)",
   "main": "./lib/Hanko.js",
