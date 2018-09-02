@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="react-hanko logo" src="logo.png" width="50%" />
+  <img alt="react-hanko logo" src="logo.png" width="40%" />
 </p>
 
 <p align="center">
@@ -22,6 +22,8 @@ A UI component to render Japanese *hanko*. Use it to add flair and realism to fo
 > *A Japanese stamp made of wood, stone, or horn, engraved with the name of an individual, office, or institution and used instead of a signature in official transactions.*
 >
 > [- The Free Dictionary](https://www.thefreedictionary.com/hanko)
+
+## Demo
 
 <p align="center">
   <img alt="react-hanko" src="https://thumbs.gfycat.com/InbornSereneBluebird-size_restricted.gif" width="75%" />
