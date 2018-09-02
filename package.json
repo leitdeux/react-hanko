@@ -21,9 +21,9 @@
   "scripts": {
     "build": "npm run prebuild && BABEL_ENV=production babel src/ --out-dir lib --copy-files --ignore \"**/__tests__/*\"",
     "clean": "rimraf lib",
-    "docs": "webpack-dev-server --config example/webpack.config.js --hot",
+    "example": "webpack-dev-server --config example/webpack.config.js --hot",
     "prebuild": "npm run clean",
-    "start": "npm run docs",
+    "start": "npm run example",
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint \"src/**/*.js\"",
     "test:unit": "jest"

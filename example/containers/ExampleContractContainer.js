@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ContractForm from '../components/ContractForm';
+import ExampleContractForm from '../components/ExampleContractForm';
 
-
-// Template contract reference: http://www.lawiz.net/template/template/029.html
-
-class ContractContainer extends Component {
+/**
+ * Example employee contract text from {@link http://www.lawiz.net/template/template/029.html}
+ */
+class ExampleContractContainer extends Component {
 
 	state = {
 		familyName: '鈴木',
@@ -35,6 +35,7 @@ class ContractContainer extends Component {
 	handleInputBlur = () => {
 		const { familyName, givenName } = this.state;
 
+		// show hanko only if both name fields have values
 		if (familyName && givenName) {
 			return this.setState({ shouldShowHanko: true });
 		}
@@ -66,7 +67,7 @@ class ContractContainer extends Component {
 		} = this.state;
 
 		return (
-			<ContractForm
+			<ExampleContractForm
 				familyName={familyName}
 				givenName={givenName}
 				onBlur={this.handleInputBlur}
@@ -86,4 +87,4 @@ class ContractContainer extends Component {
 	}
 }
 
-export default ContractContainer;
+export default ExampleContractContainer;

@@ -4,7 +4,7 @@ import { Hanko } from '../../src/Hanko';
 const HANKO_SIZE = 75;
 
 
-const ContractForm = props => {
+const ExampleContractForm = props => {
 	const {
 		familyName,
 		givenName,
@@ -92,4 +92,4 @@ const ContractForm = props => {
 	);
 };
 
-export default ContractForm;
+export default ExampleContractForm;
