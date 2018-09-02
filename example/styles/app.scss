@@ -1,0 +1,46 @@
+input {
+	font-size: 24px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid black;
+	max-width: 82px;
+	color: inherit;
+
+	&:focus {
+		border-bottom: 1px solid #DD4827;
+	}
+	&::placeholder {
+		font-size: 18px;
+		color: #aaa;
+	}
+}
+
+.contract-container {
+	padding: 32px;
+	display: flex;
+	justify-content: center;
+}
+
+.contract-content {
+	padding: 16px;
+	width: 66%;
+}
+
+.contract-center-div {
+	display: flex;
+	justify-content: center;
+}
+
+.contract-center-text {
+	text-align: center;
+}
+
+.hanko-container {
+	position: relative;
+}
+
+.hanko-content {
+	position: absolute;
+	top: -16px;
+	left: 16px;
+}

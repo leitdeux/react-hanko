@@ -1,9 +1,10 @@
 .babelrc
 .eslintrc
+.editorconfig
 .travis.yml
 *.sublime-project
 *.sublime-workspace
 setupTests.js
 src
-docs
+example
 CODE_OF_CONDUCT.md

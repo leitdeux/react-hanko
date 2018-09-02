@@ -1,3 +1,19 @@
+<p align="center">
+  <img alt="react-hanko logo" src="logo.png" width="75%" />
+</p>
+
+<p align="center">
+  <a href="https://travis-ci.org/leitdeux/react-hanko">
+    <img src="https://travis-ci.org/leitdeux/react-hanko.svg?branch=master" />
+  </a>
+  <a href="https://npmjs.org/package/react-hanko">
+    <img src="http://img.shields.io/npm/v/react-hanko.svg" />
+  </a>
+  <a href="https://www.twitter.com/leitdeux">
+    <img src="https://img.shields.io/badge/contact-@leitdeux-blue.svg" />
+  </a>
+</p>
+
 # react-hanko
 
 A UI component to render Japanese *hanko*. Use it to add flair and realism to forms, digital contracts and signatures. 💮
@@ -6,6 +22,10 @@ A UI component to render Japanese *hanko*. Use it to add flair and realism to fo
 > *A Japanese stamp made of wood, stone, or horn, engraved with the name of an individual, office, or institution and used instead of a signature in official transactions.*
 >
 > [- The Free Dictionary](https://www.thefreedictionary.com/hanko)
+
+<p align="center">
+  <img alt="react-hanko" src="https://thumbs.gfycat.com/InbornSereneBluebird-size_restricted.gif" width="75%" />
+</p>
 
 ## Features
 
