@@ -112,7 +112,7 @@ class Hanko extends Component {
 	 * Returns the font size (in pixels) of the hanko text label.
 	 * @return {string}
 	 */
-	getFontSize() {
+	getFontSize = () => {
 		const { detectedLanguage } = this.state;
 		const {
 			children,
@@ -137,7 +137,7 @@ class Hanko extends Component {
 	 * This value is used for both height and width of the ring.
 	 * @return {string}
 	 */
-	getRingSize() {
+	getRingSize = () => {
 		const {
 			ringSize,
 			size
@@ -156,7 +156,7 @@ class Hanko extends Component {
 	 * Returns the letter spacing (in em) to be used to style the hanko text label.
 	 * @return {string}
 	 */
-	getLetterSpacing() {
+	getLetterSpacing = () => {
 		const { detectedLanguage } = this.state;
 		const {
 			children,
@@ -173,7 +173,7 @@ class Hanko extends Component {
 	 * Orientations may be horizontal or vertical.
 	 * @return {string}
 	 */
-	getTextOrientation() {
+	getTextOrientation = () => {
 		const { detectedLanguage } = this.state;
 		const { orientation } = this.props;
 
@@ -196,7 +196,7 @@ class Hanko extends Component {
 	 * Identifies the language used in the hanko label text,
 	 * recognizing it as either English or Japanese.
 	 */
-	detectLanguage() {
+	detectLanguage = () => {
 		const { children, familyName } = this.props;
 
 		const nameText = children || familyName;
