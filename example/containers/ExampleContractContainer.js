@@ -43,7 +43,7 @@ class ExampleContractContainer extends Component {
 		this.setState({ shouldShowHanko: false });
 	};
 
-	renderContractFormText() {
+	renderContractFormText = () => {
 		return (
 			<div className="contract-content">
 				<h4 className="contract-center-text">入社誓約書</h4>
@@ -58,7 +58,7 @@ class ExampleContractContainer extends Component {
 		);
 	}
 
-	renderContractFormInputs() {
+	renderContractFormInputs = () => {
 		const {
 			familyName,
 			givenName,
