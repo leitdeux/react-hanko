@@ -1,3 +1,6 @@
+# 0.1.2 (December 8, 2018)
+*  9fba3ac Resolve dependency vulnerability with merge
+
 # 0.1.1
 *  adff9f1 Update .npmignore
 *  398d304 Update README.md
