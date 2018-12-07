@@ -1,6 +1,6 @@
 {
   "name": "react-hanko",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React component for rendering hanko (Japanese name seals)",
   "author": "Elliott Fiedler <elliott.fiedler@icloud.com> (https://github.com/leitdeux)",
   "main": "./lib/Hanko.js",
@@ -60,7 +60,7 @@
     "style-loader": "^0.22.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.10"
   },
   "peerDependencies": {
     "react": ">=15.0.0",
